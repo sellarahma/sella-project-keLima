@@ -1,12 +1,9 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<app-header></app-header>
+<app-headerSella (featureSelected)="onNavigate($event)"></app-headerSella>
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <app-recipe></app-recipe>
-      <app-shopping-list></app-shopping-list>
+      <app-recipeSella *ngIf="loadedFeature === 'recipe'"></app-recipeSella>
+      <app-shopping-listSella *ngIf="loadedFeature !== 'recipe'"></app-shopping-listSella>
     </div>
   </div>
 </div>
-
-
