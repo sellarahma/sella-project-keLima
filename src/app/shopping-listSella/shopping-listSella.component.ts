@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Ingredient } from '../sharedSella/ingredientSella.model';
 import { ShoppingListSellaService } from '../shopping-listSella/shopping-listSella.service';
 
-
 @Component({
   selector: 'app-shopping-listSella',
   templateUrl: './shopping-listSella.component.html',
@@ -11,7 +10,7 @@ import { ShoppingListSellaService } from '../shopping-listSella/shopping-listSel
 export class ShoppingListSellaComponent implements OnInit {
 
   ingredients:Ingredient[]
- // =[
+  //=[
     //new Ingredient('Apples',23),
     //new Ingredient('Tomato',10),
   //];
@@ -20,15 +19,16 @@ export class ShoppingListSellaComponent implements OnInit {
 
   ngOnInit() {
     this.ingredients=this.slsService.getIngredient();
-    this.slsService.ingredientChange
+    this.slsService.IngredientChange
     .subscribe(
       (Ingredient:Ingredient[])=>{
         this.ingredients=Ingredient;
       }
     )
   }
-//onIngredientAdded(ingredient:Ingredient)
-//{
+
+  //onIngredientAdded(ingredient:Ingredient)
+  //{
   //this.ingredients.push(ingredient);
 //}
 }

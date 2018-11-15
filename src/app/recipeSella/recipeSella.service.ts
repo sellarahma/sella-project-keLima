@@ -31,8 +31,12 @@ export class RecipeSellaService {
   getRecipes(){
     return this.recipes.slice();
   }
-
-  
+  addIngredientsShoppingList(ingredients: Ingredient[]){
+    this.slsService.addIngredients(ingredients);
+  }
+  getRecipe(index:number){
+    return this.recipes[ index];
+  }
 constructor(private slsService: ShoppingListSellaService) { }
 
 }

@@ -6,11 +6,11 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./headerSella.component.css']
 })
 export class HeaderSellaComponent implements OnInit {
-  @Output() featureSelected = new EventEmitter<string>();
+  // @Output() featureSelected = new EventEmitter<string>();
 
-  onSelect(feature:string){
-    this.featureSelected.emit(feature);
-  }
+  // onSelect(feature:string){
+   // this.featureSelected.emit(feature);
+ // }
 
   constructor() { }
 

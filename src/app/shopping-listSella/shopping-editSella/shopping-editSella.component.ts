@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, EventEmitter, Output } from '@angular/core';
-import { Ingredient } from 'D:/Semester 3/belajar_angular/project-keempat/src/app/sharedSella/ingredientSella.model';
+import { Ingredient } from 'D://Semester 3/belajar_angular/project-keempat/src/app/sharedSella/ingredientSella.model';
 import { ShoppingListSellaService } from '../shopping-listSella.service';
 
 @Component({
@@ -13,8 +13,7 @@ export class ShoppingEditSellaComponent implements OnInit {
 
   @ViewChild('nameInput') nameRef:ElementRef;
   @ViewChild('amountInput') amountRef:ElementRef;
- // @Output() ingredientAdded= new EventEmitter<name:String,amount:number)>();
-
+  //@Output() ingredientAdded= new EventEmitter<Ingredient>();
 
   constructor(private slsService:ShoppingListSellaService) { }
 
@@ -27,7 +26,5 @@ export class ShoppingEditSellaComponent implements OnInit {
     const newIngredient= new Ingredient(ingName,ingAmount);
     this.slsService.addIngredient(newIngredient);
     //this.ingredientAdded.emit(newIngredient);
-    //console.log(this.ingredientAdded);
-    //Testability
   }
 }

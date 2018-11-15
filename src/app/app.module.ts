@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HeaderSellaComponent } from './headerSella/headerSella.component';
@@ -10,7 +13,10 @@ import { RecipeListSellaComponent } from './recipeSella/recipe-listSella/recipe-
 import { RecipeItemSellaComponent } from './recipeSella/recipe-listSella/recipe-itemSella/recipe-itemSella.component';
 import { ShoppingEditSellaComponent } from './shopping-listSella/shopping-editSella/shopping-editSella.component';
 import { DropdownSellaDirective } from './sharedSella/dropdownSella.directive';
-import { ShoppingListSellaService } from './shopping-listSella/shopping-listSella.Service';
+import { ShoppingListSellaService } from './shopping-listSella/shopping-listSella.service';
+import { RecipeStartSellaComponent } from './recipeSella/recipe-startSella/recipe-startSella.component';
+import { RecipeEditSellaComponent } from './recipeSella/recipe-editSella/recipe-editSella.component';
+
 
 @NgModule({
   declarations: [
@@ -23,10 +29,14 @@ import { ShoppingListSellaService } from './shopping-listSella/shopping-listSell
     RecipeItemSellaComponent,
     ShoppingEditSellaComponent,
     DropdownSellaDirective,
-    ShoppingListSellaService
+    RecipeStartSellaComponent,
+    RecipeEditSellaComponent
 ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [ShoppingListSellaService],
   bootstrap: [AppComponent]
